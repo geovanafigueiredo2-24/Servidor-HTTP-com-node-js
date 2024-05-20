@@ -1,0 +1,17 @@
+1. const http = require('http'): Este comando importa o módulo HTTP do Node.js, que permite ao Node.js transferir dados pela Internet.
+
+2. const server = http.createServer((req, res) => {...}): Este comando cria um novo servidor HTTP. O servidor é configurado para responder a solicitações HTTP com a função fornecida. A função recebe dois argumentos: req (o objeto de solicitação) e res (o objeto de resposta).
+
+3. console.log(req.url): Este comando imprime a URL da solicitação HTTP no console.
+
+4. switch (req.url) {...}: Este bloco de código verifica a URL da solicitação HTTP e executa diferentes ações com base na URL.
+
+5. case '/aluno': alunoRoute(req, res): Se a URL da solicitação for “/aluno”, a função alunoRoute é chamada com os objetos de solicitação e resposta.
+
+6. default: ...: Se a URL da solicitação não corresponder a nenhum dos casos especificados, o servidor responderá com um status 404 (Não encontrado) e uma mensagem de erro.
+
+7. server.listen(8080, () => {...}): Este comando inicia o servidor na porta 8080.
+ Quando o servidor está pronto para receber solicitações, ele imprime “Servidor pronto na porta 8080!” no console.
+
+8. function alunoRoute(req, res) {...}: Esta função lida com solicitações para a rota “/aluno”. 
+   Ela verifica o método da solicitação HTTP (GET, POST, etc.) e responde de maneira apropriada.
